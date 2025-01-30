@@ -23,7 +23,7 @@ public class EnableDisable : MonoBehaviour
         {
             //sr.enabled = false;
             //script.enabled = false;
-            go.SetActive(false);
+            //go.SetActive(false);
 
         }
         if (Input.GetKeyDown(KeyCode.Space))
@@ -31,12 +31,12 @@ public class EnableDisable : MonoBehaviour
 
             //sr.enabled = true;
             //script.enabled = true;
-            go.SetActive(true);
+            //go.SetActive(true);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            ase.Play();
+            //ase.Play();
         }
 
 
