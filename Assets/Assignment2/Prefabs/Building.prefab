@@ -98,7 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b7a3581914141458688d689f317510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  prefab: {fileID: 6993513760059662763}
+  speed: 10
 --- !u!114 &1918716224657152208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,11 +114,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6993513760059662763}
   spawnLocation: {fileID: 0}
-  bSpawnDistance: 0
   spawnTimeLimit: 3
   timePS: 0.005
-  dTime: 5
-  speed: 3
+  destoryTime: 0
+  groupSpawnCount: 0
   minSize: 3
   maxSize: 8
-  bSpeed: 0
+  minPos: 0
+  maxPos: 0

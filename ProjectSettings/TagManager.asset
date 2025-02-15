@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2557452393
+    locked: 0
+  - name: Buildings
+    uniqueID: 2653275239
+    locked: 0
+  - name: Human Torch
+    uniqueID: 1095761605
+    locked: 0
+  - name: FireBall
+    uniqueID: 1073931709
+    locked: 0
+  - name: UI
+    uniqueID: 2179021951
+    locked: 0

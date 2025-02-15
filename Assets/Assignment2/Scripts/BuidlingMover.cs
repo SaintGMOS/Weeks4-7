@@ -4,21 +4,32 @@ using UnityEngine;
 
 public class BuidlingMover : MonoBehaviour
 {
-
-    public float speed;
+    public GameObject prefab;
+    public static float speed;
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        Vector3 loc = transform.position;
 
-        Vector3 left = new Vector3(-1, 0, 0);
+        loc.x += -speed * Time.deltaTime;
 
-        transform.position += left * speed * Time.deltaTime;
+        transform.position = loc;
+    }
+
+
+    public void Speed(float s)
+    {
+        speed = s;
+       
 
     }
+
+
+
 }
