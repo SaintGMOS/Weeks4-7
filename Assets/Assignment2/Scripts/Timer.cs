@@ -5,13 +5,12 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-
     Slider slider;
-    float t;
+    public float t;
     // Start is called before the first frame update
     void Start()
     {
-        slider.GetComponent<Slider>();
+        slider = GetComponent<Slider>();
     }
 
     // Update is called once per frame
@@ -19,7 +18,6 @@ public class Timer : MonoBehaviour
     {
         t += Time.deltaTime;
         slider.value = t % slider.maxValue;
-
 
     }
 }
