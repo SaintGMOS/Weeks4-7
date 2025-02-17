@@ -5,32 +5,45 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    Slider slider;
-    private float cooldown;
-    private float cooldownLeft;
-
+    private Slider slider;
+    private float cooldown = 0f;
+    private float cooldownStart = 0f;
+    private bool isCooldownOn = false;
 
     // Start is called before the first frame update
     void Start()
     {
         slider = GetComponent<Slider>();
-        slider.value = 1;
+        slider.value = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        cooldownLeft += Time.deltaTime;
-        slider.value = cooldownLeft / cooldown;
 
+        if (isCooldownOn)
+        {
+            float incrementTime = Time.time - cooldownStart;
+
+            if (incrementTime < cooldown)
+            {
+                slider.value = incrementTime / cooldown; // Gradually increase slider
+            }
+            else
+            {
+                slider.value = 1; // Fill the slider when cooldown is done
+                isCooldownOn = false; // Stop tracking cooldown
+            }
+        }
     }
 
 
     public void CooldownStart(float time)
     {
         cooldown = time;
-        cooldownLeft = time;
-        slider.value = 1;
+        cooldownStart = Time.time; // Store the exact time the cooldown starts
+        isCooldownOn = true; // Start cooldown tracking
+        slider.value = 0; // Start from empty
     }
 
 
