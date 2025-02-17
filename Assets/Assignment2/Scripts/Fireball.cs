@@ -9,11 +9,20 @@ public class Fireball : MonoBehaviour
     private GameObject fB;
     public float speed;
     public float destroyTime;
+
+    public float cooldownTime = 2f; // Cooldown duration in seconds
+    private float takenShotTime;
+    private Timer timer; 
+
     private Vector3 direction = new Vector3(1, 0, 0);
+
     // Start is called before the first frame update
     void Start()
     {
+        takenShotTime = -cooldownTime; // Iss allowed firing immediately
 
+        // Get Timer component from the same GameObject i think
+        timer = GetComponent<Timer>();
     }
 
     // Update is called once per frame
